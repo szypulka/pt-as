@@ -1,0 +1,14 @@
+phantom:
+  address: localhost:8080
+  load_profile:
+    load_type: instances
+    schedule: const(100, 2m)
+  instances: 100
+  uris: ['/hello']
+overload:
+  enabled: true
+  package: yandextank.plugins.DataUploader
+  token_file: "token.txt"
+console:
+  enabled: true
+  package: yandextank.plugins.Console
